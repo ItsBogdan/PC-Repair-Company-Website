@@ -1,0 +1,16 @@
+{% extends 'base_template.html' %}
+
+{% block title %}<title>Создать заказ</title>{% endblock %}
+
+{% block content %}
+
+<div style="margin-left: 45%; margin-right: 45%;">
+<h1>Создать заказ:</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" style="font-size: 25px; padding: 10px; border-radius: 10%; width: 100%" value="Создать" />
+</form>
+</div>
+
+{% endblock %}
